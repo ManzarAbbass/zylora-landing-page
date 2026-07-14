@@ -1,3 +1,19 @@
+# Zylora
+
+A fictional email marketing agency landing page
+with GSAP animations, Embla carousels, and 
+modern Next.js architecture.
+
+## Context Files
+
+Read the following to get the full context of the project:
+
+- @context/project-overview.md
+- @context/coding-standards.md
+- @context/ai-interaction.md
+- @context/current-feature.md
+
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 

@@ -46,15 +46,27 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen overflow-hidden bg-white pt-16 lg:pt-24"
+      className="relative min-h-screen overflow-hidden pt-16 lg:pt-24"
     >
+      {/* Background */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/assets/hero/Hero Background.png"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+          aria-hidden
+        />
+      </div>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-8 md:gap-12 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-2">
           {/* Left Column — Content */}
           <div>
             <div
               data-anim="fade-up"
-              className="mb-4 inline-flex items-center gap-2 rounded-full border border-black px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-text-primary sm:mb-6 sm:px-4 sm:py-1.5 sm:text-xs"
+              className="mb-4 inline-flex items-center gap-2 rounded-full border border-black px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-text-primary whitespace-nowrap sm:mb-6 sm:px-4 sm:py-1.5 sm:text-xs"
             >
               <span className="h-2 w-2 rounded-full bg-brand-purple" />
               OVER 35+ EDUCATIONAL VIDEOS ON YOUTUBE
@@ -94,38 +106,40 @@ export default function HeroSection() {
 
           {/* Right Column — Image */}
           <div className="relative flex items-center justify-center">
-            <div className="relative h-[250px] w-full sm:h-[500px] lg:h-[600px]">
+            <div className="relative w-full aspect-[660/599] max-h-[50vh] sm:max-h-[55vh] lg:max-h-[520px] ">
               <Image
                 data-anim="card"
                 src="/assets/hero/Hero Image.png"
                 alt="Email marketing dashboard preview"
                 fill
-                className="object-contain"
+                sizes="(max-width: 640px) 100vw, 50vw"
+className="object-contain"
                 preload
+                quality={90}
               />
 
-              {/* Floating Badge 1 — Bespoke Designs — top left */}
+              {/* Floating Badge 1 — Bespoke Designs — top arrow tip */}
               <div
                 data-anim="badge"
-                className="absolute left-0 -top-4 z-20 max-w-[130px] rounded-xl bg-white px-2 py-1.5 shadow-lg sm:left-4 sm:-top-1 sm:max-w-[200px] sm:px-4 sm:py-3"
+                className="absolute left-[9%] top-[3.5%] z-20 whitespace-nowrap max-w-[100px] -translate-x-1/2 -translate-y-1/2 rounded bg-white px-1.5 py-1 shadow-lg sm:left-[7%] sm:top-[1%] sm:max-w-[200px] sm:px-4 sm:py-3"
               >
-                <p className="text-[10px] font-semibold text-text-primary sm:text-xs">
+                <p className="text-[8px] font-semibold text-text-primary sm:text-xs">
                   Bespoke Designs
                 </p>
-                <p className="mt-0.5 text-[8px] text-gray-500 sm:text-[10px]">
+                <p className="mt-0.5 text-[6px] text-gray-500 sm:text-[10px]">
                   — By real graphic designers
                 </p>
               </div>
 
-              {/* Floating Badge 2 — Real Reporting — bottom right */}
+              {/* Floating Badge 2 — Real Reporting — bottom arrow tip */}
               <div
                 data-anim="badge"
-                className="absolute bottom-1 right-0 z-20 max-w-[130px] rounded-xl bg-white px-2 py-1.5 shadow-lg sm:bottom-2 sm:right-4 sm:max-w-[200px] sm:px-4 sm:py-3"
+                className="absolute left-[78%] top-[99%] z-20 whitespace-nowrap max-w-[100px] -translate-x-1/2 -translate-y-1/2 rounded bg-white px-1.5 py-1 shadow-lg sm:top-[104%] sm:max-w-[200px] sm:px-4 sm:py-3"
               >
-                <p className="text-[10px] font-semibold text-text-primary sm:text-xs">
+                <p className="text-[8px] font-semibold text-text-primary sm:text-xs">
                   Real reporting
                 </p>
-                <p className="mt-0.5 text-[8px] text-gray-500 sm:text-[10px]">
+                <p className="mt-0.5 text-[6px] text-gray-500 sm:text-[10px]">
                   — Based off brand data
                 </p>
               </div>

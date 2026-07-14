@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand-purple: #6366F1;
+  --color-brand-purple-dark: #5558E6;
+  --color-brand-amber: #F59E0B;
+  --color-badge-bg: #F3F4F6;
+  --color-text-primary: #111111;
+
+  --font-heading: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --default-font-family: var(--font-sans);
+}

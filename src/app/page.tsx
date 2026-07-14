@@ -1,3 +1,13 @@
+import NavBar from '@/components/navbar/NavBar'
+import HeroSection from '@/components/hero/HeroSection'
+
 export default function Home() {
-  return <h1>zylora</h1>;
+  return (
+    <>
+      <NavBar />
+      <main>
+        <HeroSection />
+      </main>
+    </>
+  )
 }

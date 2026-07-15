@@ -1,13 +1,31 @@
-# Current Feature
+# Current Feature: Comparison Section (03)
 
 ## Status
-<!-- Not Started | In Progress | Complete -->
+In Progress
 
 ## Goals
-<!-- What does success look like? -->
+- Build `ComparisonSection` component in `src/components/comparison/ComparisonSection.tsx`
+- Add pill badge eyebrow: "THE TRUTH ABOUT YOUR NUMBERS"
+- Add centered serif H2 heading with italic purple highlight on the tool/dashboard reference
+- Add muted gray subtext paragraph below heading
+- Build left card (light gray `#F3F4F6` bg): "THE TYPICAL AGENCY OR FREELANCER" with 4 pain-point rows — purple circle with crossed-out icon, bold title, gray description
+- Build right card (solid purple `#6366F1` bg): "ZYLORA MARKETING" with 4 counter-claim rows — yellow circle with check icon, white bold title, light purple/white description
+- Direct one-for-one antithesis pairing across all 4 rows:
+  1. Vanity metrics → Proprietary conversion data & deep analytics access
+  2. One-size-fits-all flows → Purchase-timing AI tracking models
+  3. Poor cookie-cutter design → Direct client-to-designer collaboration
+  4. AI-generated copy → Human-designed layouts with human-written copy
+- Add centered CTA button: "Get a Free Email Audit →" (purple fill, white text, arrow)
+- Implement GSAP scroll-triggered entrance animations
+- Ensure responsive — cards stack vertically on mobile
+- Register component in `src/app/page.tsx`
 
 ## Notes
-<!-- Additional context, constraints, or details -->
+- Color tokens: white `#FFFFFF`, light gray `#F3F4F6`, brand purple `#6366F1`, yellow `#FACC15`
+- Purple circle icons = negative (left column), Yellow circle icons = positive (right column)
+- GSAP animations with `ScrollTrigger` for section entrance (must use `'use client'`)
+- Follow existing patterns from `HeroSection` and `OurWorkSection`
+- Assets: check `public/assets/` for any relevant icons; otherwise use inline SVG icons
 
 ## History
 

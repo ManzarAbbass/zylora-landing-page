@@ -1,6 +1,7 @@
 import NavBar from '@/components/navbar/NavBar'
 import HeroSection from '@/components/hero/HeroSection'
 import OurWorkSection from '@/components/our-work/OurWorkSection'
+import ComparisonSection from '@/components/comparison/ComparisonSection'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <OurWorkSection />
+        <ComparisonSection />
       </main>
     </>
   )

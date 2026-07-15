@@ -2,6 +2,7 @@ import NavBar from '@/components/navbar/NavBar'
 import HeroSection from '@/components/hero/HeroSection'
 import OurWorkSection from '@/components/our-work/OurWorkSection'
 import ComparisonSection from '@/components/comparison/ComparisonSection'
+import ClientSuccessCardsSection from '@/components/client-success-cards/ClientSuccessCardsSection'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <HeroSection />
         <OurWorkSection />
         <ComparisonSection />
+        <ClientSuccessCardsSection />
       </main>
     </>
   )

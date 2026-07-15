@@ -18,9 +18,13 @@ export default function NavBar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between lg:h-20">
-          <span className="text-xl font-bold tracking-[0.2em] text-text-primary">
-            ZYLORA
-          </span>
+          <div className="flex flex-col items-center leading-none">
+            <span className="block h-px w-full bg-text-primary" />
+            <span className="block px-1 text-xl font-bold tracking-[0.2em] text-text-primary">
+              ZYLORA
+            </span>
+            <span className="block h-px w-full bg-text-primary" />
+          </div>
 
           <div className="hidden items-center gap-8 lg:flex">
             {NAV_LINKS.map((link) => (

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-purple: #6366F1;
-  --color-brand-purple-dark: #5558E6;
+  --color-brand-purple: #4F46E5;
+  --color-brand-purple-dark: #4338CA;
   --color-brand-amber: #F59E0B;
   --color-badge-bg: #F3F4F6;
   --color-text-primary: #111111;

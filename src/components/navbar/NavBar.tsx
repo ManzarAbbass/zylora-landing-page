@@ -27,14 +27,14 @@ export default function NavBar() {
               <a
                 key={link}
                 href="#"
-                className="text-sm font-medium text-gray-600 transition-colors hover:text-text-primary"
+                className="rounded-sm px-1 py-1.5 text-sm font-medium text-gray-600 transition-colors hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
               >
                 {link}
               </a>
             ))}
           </div>
 
-          <button className="group hidden items-center gap-2 rounded-lg bg-brand-purple px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-dark lg:flex">
+          <button className="group hidden items-center gap-2 rounded-lg bg-brand-purple px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple lg:flex">
             Get a Free Email Audit
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
               →
@@ -42,7 +42,7 @@ export default function NavBar() {
           </button>
 
           <button
-            className="lg:hidden"
+            className="rounded-sm p-2.5 lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -79,12 +79,12 @@ export default function NavBar() {
               <a
                 key={link}
                 href="#"
-                className="block py-2 text-sm font-medium text-gray-600 transition-colors hover:text-text-primary"
+                className="block rounded-sm py-2 text-sm font-medium text-gray-600 transition-colors hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
               >
                 {link}
               </a>
             ))}
-            <button className="mt-4 w-full rounded-lg bg-brand-purple px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-dark">
+            <button className="mt-4 w-full rounded-lg bg-brand-purple px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple">
               Get a Free Email Audit →
             </button>
           </div>

@@ -1,5 +1,6 @@
 import NavBar from '@/components/navbar/NavBar'
 import HeroSection from '@/components/hero/HeroSection'
+import OurWorkSection from '@/components/our-work/OurWorkSection'
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <NavBar />
       <main>
         <HeroSection />
+        <OurWorkSection />
       </main>
     </>
   )

@@ -95,7 +95,7 @@ export default function HeroSection() {
 
             <button
               data-anim="fade-up"
-              className="group mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-brand-purple px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-dark sm:w-auto sm:px-8 sm:py-4 sm:text-base"
+              className="group mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-brand-purple px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple sm:w-auto sm:px-8 sm:py-4 sm:text-base"
             >
               Get a Free Email Audit
               <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
@@ -123,10 +123,10 @@ className="object-contain"
                 data-anim="badge"
                 className="absolute left-[9%] top-[3.5%] z-20 whitespace-nowrap max-w-[100px] -translate-x-1/2 -translate-y-1/2 rounded bg-white px-1.5 py-1 shadow-lg sm:left-[7%] sm:top-[1%] sm:max-w-[200px] sm:px-4 sm:py-3"
               >
-                <p className="text-[8px] font-semibold text-text-primary sm:text-xs">
+                <p className="text-[10px] font-semibold text-text-primary sm:text-xs">
                   Bespoke Designs
                 </p>
-                <p className="mt-0.5 text-[6px] text-gray-500 sm:text-[10px]">
+                <p className="mt-0.5 text-[10px] text-gray-500 sm:text-[10px]">
                   — By real graphic designers
                 </p>
               </div>
@@ -134,12 +134,12 @@ className="object-contain"
               {/* Floating Badge 2 — Real Reporting — bottom arrow tip */}
               <div
                 data-anim="badge"
-                className="absolute left-[78%] top-[99%] z-20 whitespace-nowrap max-w-[100px] -translate-x-1/2 -translate-y-1/2 rounded bg-white px-1.5 py-1 shadow-lg sm:top-[104%] sm:max-w-[200px] sm:px-4 sm:py-3"
+                className="absolute left-[78%] top-[95%] z-20 whitespace-nowrap max-w-[100px] -translate-x-1/2 -translate-y-1/2 rounded bg-white px-1.5 py-1 shadow-lg sm:top-[98%] sm:max-w-[200px] sm:px-4 sm:py-3"
               >
-                <p className="text-[8px] font-semibold text-text-primary sm:text-xs">
+                <p className="text-[10px] font-semibold text-text-primary sm:text-xs">
                   Real reporting
                 </p>
-                <p className="mt-0.5 text-[6px] text-gray-500 sm:text-[10px]">
+                <p className="mt-0.5 text-[10px] text-gray-500 sm:text-[10px]">
                   — Based off brand data
                 </p>
               </div>

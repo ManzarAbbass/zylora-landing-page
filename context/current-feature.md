@@ -1,24 +1,13 @@
 # Current Feature
 
 ## Status
-Complete
+<!-- Not Started | In Progress | Complete -->
 
 ## Goals
-- [x] Section header with centered layout, eyebrow badge "CLIENT SUCCESS STORIES", H2 with italic *Help* and *Revenue*, subtext
-- [x] 3-column responsive card grid (desktop → tablet → mobile)
-- [x] 3 case study cards with portrait photo, category tag, brand name, narrative blurb
-- [x] Card 1 featured with distinct themed styling, Cards 2 & 3 with gray/white backgrounds
-- [x] GSAP ScrollTrigger entrance animations
-- [x] Image overlap with content panel floating over image bottom
-- [x] Card 1 solid brand-purple content panel with white text for highlight
-- [x] `rounded-4xl` borders, `mix-blend-multiply` for image transparency
-- [x] Data cleanliness: no social icons, no fabricated metrics, no real logos
+<!-- Goals will be defined when a feature is started -->
 
 ## Notes
-- Images use `mix-blend-multiply` to handle white studio backgrounds
-- Content panels use `rounded-xl shadow-sm` floating over image via `-mt-16`
-- Card 1 content: `bg-brand-purple text-white` (solid dark); Cards 2-3: `bg-white`
-- Square aspect ratio (`aspect-[1/1]`) chosen over spec's `aspect-[3/4]` for compact card height
+<!-- Notes will be added during feature development -->
 
 ## History
 

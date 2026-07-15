@@ -1,7 +1,7 @@
 # Current Feature
 
 ## Status
-Not Started
+Not Started | In Progress | Complete
 
 ## Goals
 <!-- What does success look like? -->

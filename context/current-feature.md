@@ -1,13 +1,30 @@
-# Current Feature
+# Current Feature: Dashboard Section (Section 06)
 
 ## Status
-<!-- Not Started | In Progress | Complete -->
+In Progress
 
 ## Goals
-<!-- Goals will be defined when a feature is started -->
+- [ ] Dark (#111111) background section with faint repeating typographic wordmark pattern
+- [ ] Top-left eyebrow pill badge: "THE TRUTH ABOUT YOUR NUMBERS" with amber dot
+- [ ] Symmetrical split layout header: left column (serif H2 across 3-line break with "Built" and "Software" in amber italic + body paragraph) + right column (amber CTA button)
+- [ ] Body paragraph naming Klaviyo's limitation and introducing Zylora's proprietary infrastructure
+- [ ] Nested gray (#1F2937) card container below header — fixed outer card, does not slide
+- [ ] Sub-heading inside card: "The Full Picture, One Screen"
+- [ ] Short context paragraph introducing dashboard functionality
+- [ ] Embla carousel inside card — only sub-heading, paragraph, and dashboard image change per slide (4 slides)
+- [ ] High-fidelity dashboard screenshot per slide showing sidebar nav, metric tiles, dollar figures, campaign/flow split, delivery rates, ROI deltas
+- [ ] Elongated amber dot pagination below screenshot container
+- [ ] GSAP ScrollTrigger entrance animations with proper cleanup
+- [ ] Registered in page.tsx after Video Testimonials section
 
 ## Notes
-<!-- Notes will be added during feature development -->
+- Color palette: Section bg #111111, Card bg #1F2937, Typography #FFFFFF, Accent #FACC15
+- Typography: Editorial Serif for headers, Geometric Sans-Serif for UI/body/data
+- Argument structure: name Klaviyo → describe limitation → introduce Zylora proprietary tool → show dashboard proof
+- 4 dashboard screenshots in public/assets/dashboard/ (4 JPGs + BG.png for background pattern)
+- CTA button matches Section 3 yellow button style for visual rhythm
+- Dashboard data must look realistic: fractional numbers, status indicators, date range selectors
+- Reference: @context/zylora_ui/06-dashboard-feature.md
 
 ## History
 - **2026-07-14** — Hero Section (Section 01): implemented NavBar (ZYLORA logo, 6 nav links, purple CTA), hero split-grid with GSAP entrance animations, eyebrow badge with purple dot indicator, serif H1 headline, subtext with &quot;guarantee&quot; highlight, image collage with floating badge chips.

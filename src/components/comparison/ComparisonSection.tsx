@@ -81,8 +81,11 @@ export default function ComparisonSection() {
         },
       })
 
+      const isMobile = window.innerWidth < 768
+      const offset = isMobile ? 20 : 60
+
       gsap.from('[data-anim="comparison-card-left"]', {
-        x: -60,
+        x: -offset,
         opacity: 0,
         duration: 0.8,
         ease: 'power3.out',
@@ -93,7 +96,7 @@ export default function ComparisonSection() {
       })
 
       gsap.from('[data-anim="comparison-card-right"]', {
-        x: 60,
+        x: offset,
         opacity: 0,
         duration: 0.8,
         ease: 'power3.out',
@@ -141,9 +144,9 @@ export default function ComparisonSection() {
             <em className="not-italic text-brand-purple">
               Klaviyo Dashboard
             </em>{' '}
-            Is Hiding
+            Is Hiding{' '}
             <br />
-            The Truth About Your Revenue
+            {' '}The Truth About Your Revenue
           </h2>
           <p
             data-anim="comparison-header"

@@ -98,37 +98,40 @@ export default function VideoTestimonialsSection() {
             </h2>
           </div>
 
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex touch-pan-y">
-              {VIDEOS.map((video, index) => (
-                <div
-                  key={video.id}
-                  className="min-w-0 shrink-0 grow-0 basis-[70%] sm:basis-[40%] lg:basis-[30%] px-4"
-                >
-                  <button
-                    data-anim="video-card"
-                    type="button"
-                    onClick={() => setActiveVideo(video.id)}
-                    className="group block w-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
+          <div className="relative">
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex touch-pan-y">
+                {VIDEOS.map((video, index) => (
+                  <div
+                    key={video.id}
+                    className="min-w-0 shrink-0 grow-0 basis-[70%] sm:basis-[40%] lg:basis-[30%] px-4"
                   >
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl">
-                      <img
-                        src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                        alt={video.title}
-                        className="h-full w-full object-cover"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/10">
-                        <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-brand-purple bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
-                          <svg className="ml-0.5 h-6 w-6 text-brand-purple" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </span>
+                    <button
+                      data-anim="video-card"
+                      type="button"
+                      onClick={() => setActiveVideo(video.id)}
+                      className="group block w-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple"
+                    >
+                      <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl">
+                        <img
+                          src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                          alt={video.title}
+                          className="h-full w-full object-cover"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/10">
+                          <span className="flex h-16 w-16 items-center justify-center rounded-full border-2 border-brand-purple bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
+                            <svg className="ml-0.5 h-6 w-6 text-brand-purple" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M8 5v14l11-7z" />
+                            </svg>
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                  </button>
-                </div>
-              ))}
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent" />
           </div>
 
           <div className="mt-8 flex items-center justify-center gap-2 sm:mt-10">

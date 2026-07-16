@@ -121,7 +121,7 @@ className="object-contain"
               {/* Floating Badge 1 — Bespoke Designs — top arrow tip */}
               <div
                 data-anim="badge"
-                className="absolute left-[9%] top-[3.5%] z-20 whitespace-nowrap max-w-[100px] -translate-x-1/2 -translate-y-1/2 rounded bg-white px-1.5 py-1 shadow-lg sm:left-[7%] sm:top-[1%] sm:max-w-[200px] sm:px-4 sm:py-3"
+                className="absolute left-[18%] top-[2%] z-20 whitespace-nowrap max-w-[100px] -translate-x-1/2 -translate-y-1/2 rounded bg-white px-1.5 py-1 shadow-lg sm:left-[12%] sm:top-[1%] sm:max-w-[200px] sm:px-4 sm:py-3"
               >
                 <p className="text-[10px] font-semibold text-text-primary sm:text-xs">
                   Bespoke Designs

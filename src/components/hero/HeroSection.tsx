@@ -2,10 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
+import { gsap, ScrollTrigger } from '@/lib/gsap-setup'
 
 export default function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -57,6 +54,7 @@ export default function HeroSection() {
           className="object-cover"
           sizes="100vw"
           aria-hidden
+          loading="eager"
         />
       </div>
 
@@ -94,6 +92,7 @@ export default function HeroSection() {
             </p>
 
             <button
+              type="button"
               data-anim="fade-up"
               className="group mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-brand-purple px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple sm:w-auto sm:px-8 sm:py-4 sm:text-base"
             >

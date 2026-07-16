@@ -2,10 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
+import { gsap, ScrollTrigger } from '@/lib/gsap-setup'
 
 const DATA = {
   eyebrow: 'THE TRUTH ABOUT YOUR NUMBERS',
@@ -15,21 +12,25 @@ const DATA = {
     title: 'THE TYPICAL AGENCY OR FREELANCER',
     rows: [
       {
+        id: 'vanity-metrics',
         icon: '/assets/icons/Frame-4.svg',
         title: 'Vanity Metrics',
         desc: 'Metrics that do not scale business value',
       },
       {
+        id: 'cookie-cutter-flows',
         icon: '/assets/icons/Frame-5.svg',
         title: 'Cookie-Cutter Flows',
         desc: 'One-size-fits-all templated automation sequences',
       },
       {
+        id: 'poor-design-work',
         icon: '/assets/icons/Frame-6.svg',
         title: 'Poor Design Work',
         desc: 'Low-fidelity cookie-cutter design execution',
       },
       {
+        id: 'ai-generated-copy',
         icon: '/assets/icons/Frame-7.svg',
         title: 'AI-Generated Copy',
         desc: 'Soulless, fully automated copywriting structures',
@@ -40,21 +41,25 @@ const DATA = {
     title: 'ZYLORA MARKETING',
     rows: [
       {
+        id: 'deep-analytics',
         icon: '/assets/icons/Frame.svg',
         title: 'Deep Analytics Access',
         desc: 'Proprietary conversion data and deep analytics access',
       },
       {
+        id: 'ai-purchase-tracking',
         icon: '/assets/icons/Frame-1.svg',
         title: 'AI Purchase Tracking',
         desc: 'Purchase-timing AI models optimized per user behavior',
       },
       {
+        id: 'direct-designer-access',
         icon: '/assets/icons/Frame-2.svg',
         title: 'Direct Designer Access',
         desc: 'Frictionless client-to-designer collaboration channels',
       },
       {
+        id: 'human-written-copy',
         icon: '/assets/icons/Frame-3.svg',
         title: 'Human-Written Copy',
         desc: 'Human-designed layouts with bespoke human-written copy',
@@ -81,8 +86,8 @@ export default function ComparisonSection() {
         },
       })
 
-      const isMobile = window.innerWidth < 768
-      const offset = isMobile ? 20 : 60
+      const mql = window.matchMedia('(max-width: 767px)')
+      const offset = mql.matches ? 20 : 60
 
       gsap.from('[data-anim="comparison-card-left"]', {
         x: -offset,
@@ -165,9 +170,9 @@ export default function ComparisonSection() {
               {DATA.left.title}
             </h3>
             <div className="space-y-4">
-              {DATA.left.rows.map((row, i) => (
+              {DATA.left.rows.map((row) => (
                 <div
-                  key={i}
+                  key={row.id}
                   className="flex items-start gap-4 rounded-xl bg-white p-4"
                 >
                   <Image
@@ -197,9 +202,9 @@ export default function ComparisonSection() {
               {DATA.right.title}
             </h3>
             <div className="space-y-4">
-              {DATA.right.rows.map((row, i) => (
+              {DATA.right.rows.map((row) => (
                 <div
-                  key={i}
+                  key={row.id}
                   className="flex items-start gap-4 rounded-xl bg-white/10 p-4"
                 >
                   <Image

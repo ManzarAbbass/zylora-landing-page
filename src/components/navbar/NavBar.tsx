@@ -38,7 +38,7 @@ export default function NavBar() {
             ))}
           </div>
 
-          <button className="group hidden items-center gap-2 rounded-lg bg-brand-purple px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple lg:flex">
+          <button type="button" className="group hidden items-center gap-2 rounded-lg bg-brand-purple px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple lg:flex">
             Get a Free Email Audit
             <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
               →
@@ -46,6 +46,7 @@ export default function NavBar() {
           </button>
 
           <button
+            type="button"
             className="rounded-sm p-2.5 lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
@@ -88,7 +89,7 @@ export default function NavBar() {
                 {link}
               </a>
             ))}
-            <button className="mt-4 w-full rounded-lg bg-brand-purple px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple">
+            <button type="button" className="mt-4 w-full rounded-lg bg-brand-purple px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-purple-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-purple">
               Get a Free Email Audit →
             </button>
           </div>

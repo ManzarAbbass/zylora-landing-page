@@ -2,10 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
+import { gsap, ScrollTrigger } from '@/lib/gsap-setup'
 
 const CARDS = [
   {

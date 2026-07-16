@@ -63,7 +63,7 @@ export default function OurWorkSection() {
                         src={slide.sharp}
                         alt={`Email mockup ${slide.id + 1}`}
                         fill
-                        className={`object-contain transition-all duration-500 ${isCenter ? 'blur-0' : 'blur-[2px]'}`}
+                        className={`object-contain transition-all duration-500 ${isCenter ? 'blur-0' : 'blur-[1px]'}`}
                         sizes="(max-width: 640px) 65vw, (max-width: 768px) 40vw, 24vw"
                       />
                     </div>

@@ -1,11 +1,8 @@
 'use client'
 
 import { useEffect, useRef, useState, useCallback } from 'react'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap, ScrollTrigger } from '@/lib/gsap-setup'
 import useEmblaCarousel from 'embla-carousel-react'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const VIDEOS = [
   { id: 'J0CEiuOfON0', title: 'Email Marketing Tutorial for Beginners' },
@@ -78,11 +75,17 @@ export default function VideoTestimonialsSection() {
 
   useEffect(() => {
     if (activeVideo) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
+      const scrollY = window.scrollY
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.width = '100%'
+      return () => {
+        document.body.style.position = ''
+        document.body.style.top = ''
+        document.body.style.width = ''
+        window.scrollTo(0, scrollY)
+      }
     }
-    return () => { document.body.style.overflow = '' }
   }, [activeVideo])
 
   return (
@@ -116,6 +119,10 @@ export default function VideoTestimonialsSection() {
                         <img
                           src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                           alt={video.title}
+                          loading="lazy"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`
+                          }}
                           className="h-full w-full object-cover"
                         />
                         <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 group-hover:bg-black/10">
@@ -175,9 +182,9 @@ export default function VideoTestimonialsSection() {
             <div className="aspect-video w-full overflow-hidden rounded-2xl">
               <iframe
                 src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
-                title="Video testimonial"
+                title={VIDEOS.find(v => v.id === activeVideo)?.title || 'Video testimonial'}
                 className="h-full w-full"
-                allow="autoplay; encrypted-media"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
             </div>

@@ -98,7 +98,7 @@ export default function DashboardSection() {
   return (
     <section
       ref={sectionRef}
-      className="mx-auto mt-16 w-full max-w-[1384px] overflow-hidden sm:rounded-3xl bg-[#111111] pb-8 pt-10 sm:mt-20 sm:pb-16 sm:pt-24"
+      className="mx-auto mt-6 w-full max-w-[1384px] overflow-hidden sm:rounded-3xl bg-[#111111] pb-8 pt-6 sm:mt-8 sm:pb-12 sm:pt-10"
       style={{
         backgroundImage: 'url(/assets/dashboard/BG.png)',
         backgroundSize: 'cover',
@@ -106,19 +106,19 @@ export default function DashboardSection() {
       }}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-start">
+        <div className="mb-2 flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-start">
           <div className="w-full max-w-6xl">
             <span
               data-anim="dash-header"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white"
+              className="inline-flex items-center gap-1.5 rounded-full border border-white/20 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-white sm:gap-2 sm:px-4 sm:py-1.5 sm:text-xs"
             >
               <span className="h-2 w-2 rounded-full bg-brand-amber" />
               THE TRUTH ABOUT YOUR NUMBERS
             </span>
-            <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <h2
                 data-anim="dash-header"
-                className="font-heading mt-6 text-3xl font-bold leading-snug tracking-tight text-white sm:text-4xl sm:leading-snug lg:text-5xl"
+                className="font-heading mt-2 text-3xl font-bold leading-snug tracking-tight text-white sm:text-4xl sm:leading-snug lg:text-5xl"
               >
                 We{' '}
                 <em className="not-italic text-brand-amber">Built</em>{' '}
@@ -132,14 +132,14 @@ export default function DashboardSection() {
               <button
                 data-anim="dash-cta"
                 type="button"
-                className="shrink-0 rounded-lg bg-brand-amber px-6 py-3 text-sm font-bold text-text-primary transition-all hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-amber sm:px-8 sm:py-4 sm:text-base"
+                className="shrink-0 rounded-lg bg-brand-amber px-4 py-2 text-sm font-bold text-text-primary transition-all hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-amber sm:px-6 sm:py-3 sm:text-base"
               >
                 Get a Free Email Audit &rarr;
               </button>
             </div>
             <p
               data-anim="dash-header"
-              className="mt-4 text-base leading-relaxed text-white/60 sm:text-lg"
+              className="mt-2 text-sm leading-relaxed text-white/60 sm:text-base"
             >
               Klaviyo gives you the highlights. We built a proprietary
               tracking system that surfaces what standard dashboards
@@ -152,23 +152,24 @@ export default function DashboardSection() {
 
         <div
           data-anim="dash-card"
-          className="mx-2 rounded-[2rem] bg-[#1F2937] p-6 sm:mx-4 sm:p-8 lg:p-10"
+          className="rounded-[2rem] border border-white/10 bg-[#1F2937] p-6 sm:p-8 lg:p-10 mt-6 sm:mt-8"
         >
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex touch-pan-y">
               {SLIDES.map((slide) => (
                 <div
                   key={slide.id}
-                  className="min-w-0 shrink-0 grow-0 basis-[85%] sm:basis-[65%] lg:basis-full"
+                  className="min-w-0 shrink-0 grow-0 basis-full"
                 >
-                    <div className="px-4 sm:px-6">
-                      <h3 className="text-xl font-bold text-white sm:text-2xl">
+                    <div className="p-3 sm:p-4 lg:p-6">
+                      <h3 className="text-2xl font-bold text-white sm:text-3xl">
                         {slide.heading}
                       </h3>
                       <p className="mt-2 text-sm leading-relaxed text-white/60 sm:text-base">
                         {slide.description}
                       </p>
-                      <div className="relative mx-auto mt-6 aspect-[16/9] max-w-5xl overflow-hidden rounded-3xl">
+                    </div>
+                      <div className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl  max-h-[400px] sm:max-h-[500px]">
                       <Image
                         src={slide.image}
                         alt={slide.heading}
@@ -177,13 +178,12 @@ export default function DashboardSection() {
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 80vw"
                       />
                     </div>
-                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-2">
+          <div className="mt-3 flex items-center justify-center gap-2">
             {SLIDES.map((_, index) => (
               <button
                 key={index}

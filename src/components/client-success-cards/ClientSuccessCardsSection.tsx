@@ -59,26 +59,26 @@ export default function ClientSuccessCardsSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-white py-10 sm:py-20 lg:py-24">
+    <section ref={sectionRef} className="bg-white pt-2 sm:pt-4 lg:pt-6 pb-10 sm:pb-20 lg:pb-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-16">
+                <div className="mx-auto mb-6 max-w-3xl text-center sm:mb-10">
           <span
             data-anim="success-header"
-            className="inline-flex items-center gap-2 rounded-full border border-black px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-text-primary"
+            className="inline-flex items-center gap-1.5 rounded-full border border-black px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-text-primary sm:gap-2 sm:px-4 sm:py-1.5 sm:text-xs"
           >
             <span className="h-2 w-2 rounded-full bg-brand-purple" />
             CLIENT SUCCESS STORIES
           </span>
           <h2
             data-anim="success-header"
-            className="font-heading mt-4 text-2xl font-bold leading-snug tracking-tight sm:text-4xl sm:leading-snug lg:text-5xl"
+            className="font-heading mt-3 text-2xl font-bold leading-snug tracking-tight sm:text-3xl sm:leading-snug lg:text-4xl"
           >
             We <em className="not-italic text-brand-purple">Help</em> Brands Take Control Of Their Email{' '}
             <em className="not-italic text-brand-purple">Revenue</em>
           </h2>
           <p
             data-anim="success-header"
-            className="mt-3 text-base leading-relaxed text-text-primary/60 sm:text-lg"
+            className="mt-2 text-sm leading-relaxed text-text-primary/60 sm:text-base"
           >
             Real results from real partnerships — no fluff, just execution.
           </p>
@@ -88,9 +88,9 @@ export default function ClientSuccessCardsSection() {
           {CARDS.map((card) => (
             <article key={card.id} data-anim="success-card">
               <div
-                className={`overflow-hidden rounded-4xl border border-gray-200 ${card.featured ? 'bg-brand-purple/5' : 'bg-gray-50'}`}
+                className={`overflow-hidden rounded-2xl border border-gray-200 ${card.featured ? 'bg-brand-purple/5' : 'bg-gray-50'}`}
               >
-                <div className="relative aspect-[4/3] w-full sm:aspect-[1/1]">
+                <div className="relative aspect-[4/3] w-full sm:aspect-[4/3] max-h-[200px]">
                   <Image
                     src={card.image}
                     alt={`${card.brand} client portrait`}
@@ -100,15 +100,15 @@ export default function ClientSuccessCardsSection() {
                   />
                 </div>
                 <div
-                  className={`relative z-10 -mt-12 rounded-xl px-4 pb-3 pt-8 shadow-sm sm:-mt-16 sm:px-5 sm:pb-4 sm:pt-12 ${card.featured ? 'bg-brand-purple text-white' : 'bg-white'}`}
+                  className={`relative z-10 -mt-6 rounded-xl px-2 pb-2 pt-3 shadow-sm sm:-mt-8 sm:px-3 sm:pb-2 sm:pt-5 ${card.featured ? 'bg-brand-purple text-white' : 'bg-white'}`}
                 >
                   <span className={`text-[11px] font-semibold tracking-[0.12em] ${card.featured ? 'text-white/80' : 'text-brand-purple'}`}>
                     {card.category}
                   </span>
-                  <h3 className={`mt-1.5 text-lg font-bold sm:text-xl ${card.featured ? 'text-white' : 'text-text-primary'}`}>
+                  <h3 className={`mt-1 text-base font-bold sm:text-lg ${card.featured ? 'text-white' : 'text-text-primary'}`}>
                     {card.brand}
                   </h3>
-                  <p className={`mt-1.5 text-sm leading-relaxed ${card.featured ? 'text-white/70' : 'text-text-primary/60'}`}>
+                  <p className={`mt-1 text-xs leading-relaxed ${card.featured ? 'text-white/70' : 'text-text-primary/60'}`}>
                     {card.narrative}
                   </p>
                 </div>

@@ -37,11 +37,11 @@ export default function OurWorkSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative mx-auto mt-16 w-full max-w-[1384px] overflow-hidden sm:rounded-3xl bg-brand-purple pb-8 pt-10 sm:mt-20 sm:pb-16 sm:pt-24"
+      className="relative mx-auto mt-6 w-full max-w-[1384px] overflow-hidden sm:rounded-3xl bg-brand-purple pb-10 pt-8 sm:mt-8 sm:pb-16 sm:pt-14"
       style={{ backgroundImage: 'url(/assets/our_work/Our%20Work%20BG.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
-      <div className="mx-auto mb-6 max-w-[1384px] px-4 text-center sm:mb-14 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-2xl font-semibold leading-tight text-white sm:text-4xl lg:text-5xl">
+      <div className="mx-auto mb-4 max-w-[1384px] px-4 text-center sm:mb-8 sm:px-6 lg:px-8">
+        <h2 className="font-heading text-xl font-semibold leading-tight text-white sm:text-3xl lg:text-4xl">
           Our Work Speaks{' '}
           <em className="not-italic text-brand-amber">For Itself</em>
         </h2>
@@ -57,7 +57,7 @@ export default function OurWorkSection() {
                   key={slide.id}
                   className="min-w-0 shrink-0 grow-0 basis-[65%] transition-all duration-500 sm:basis-[40%] md:basis-[28%] lg:basis-[24%]"
                 >
-                  <div className={`relative mx-auto w-full transition-all duration-500 ${isCenter ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-60'}`}>
+                  <div className={`relative mx-auto w-full max-w-[200px] sm:max-w-[240px] transition-all duration-500 ${isCenter ? 'scale-100 opacity-100' : 'scale-[0.85] opacity-60'}`}>
                     <div className="relative aspect-[309/630] w-full">
                       <Image
                         src={slide.sharp}
@@ -80,7 +80,7 @@ export default function OurWorkSection() {
         </div>
       </div>
 
-      <div className="mt-6 flex items-center justify-center gap-2 sm:mt-10">
+      <div className="mt-3 flex items-center justify-center gap-2 sm:mt-6">
         {SLIDES.map((_, index) => (
           <button
             key={index}
@@ -96,7 +96,7 @@ export default function OurWorkSection() {
         ))}
       </div>
 
-      <div className="mt-6 text-center sm:mt-10">
+      <div className="mt-4 text-center sm:mt-6">
         <button
           type="button"
           className="inline-flex items-center gap-2 rounded-lg bg-brand-amber px-6 py-3 text-sm font-bold text-text-primary transition-all hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-amber sm:px-8 sm:py-4 sm:text-base"

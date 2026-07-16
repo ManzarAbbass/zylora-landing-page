@@ -90,12 +90,12 @@ export default function VideoTestimonialsSection() {
 
   return (
     <>
-      <section ref={sectionRef} className="bg-white py-10 sm:py-20 lg:py-24">
+      <section ref={sectionRef} className="bg-white pt-2 sm:pt-4 lg:pt-6 pb-10 sm:pb-20 lg:pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-16">
+          <div className="mx-auto mb-6 max-w-3xl text-center sm:mb-10">
             <h2
               data-anim="video-header"
-              className="font-heading text-2xl font-bold leading-snug tracking-tight sm:text-4xl sm:leading-snug lg:text-5xl"
+              className="font-heading text-2xl font-bold leading-snug tracking-tight sm:text-3xl sm:leading-snug lg:text-4xl"
             >
               Learn From The <em className="not-italic text-brand-purple">Experts</em>
             </h2>
@@ -107,7 +107,7 @@ export default function VideoTestimonialsSection() {
                 {VIDEOS.map((video, index) => (
                   <div
                     key={video.id}
-                    className="min-w-0 shrink-0 grow-0 basis-[70%] sm:basis-[40%] lg:basis-[30%] px-4"
+                    className="min-w-0 shrink-0 grow-0 basis-[65%] sm:basis-[35%] lg:basis-[25%] px-3"
                   >
                     <button
                       data-anim="video-card"
@@ -141,7 +141,7 @@ export default function VideoTestimonialsSection() {
             <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent" />
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-2 sm:mt-10">
+          <div className="mt-4 flex items-center justify-center gap-2 sm:mt-6">
             {VIDEOS.map((_, index) => (
               <button
                 key={index}

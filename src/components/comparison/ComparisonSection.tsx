@@ -136,7 +136,7 @@ export default function ComparisonSection() {
         <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
           <span
             data-anim="comparison-header"
-            className="inline-flex items-center gap-2 rounded-full border border-black px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-text-primary"
+            className="inline-flex items-center gap-1.5 rounded-full border border-black px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-text-primary sm:gap-2 sm:px-4 sm:py-1.5 sm:text-xs"
           >
             <span className="h-2 w-2 rounded-full bg-brand-purple" />
             {DATA.eyebrow}

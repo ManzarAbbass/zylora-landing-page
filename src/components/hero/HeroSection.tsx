@@ -59,7 +59,7 @@ export default function HeroSection() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-8 md:gap-12 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-2">
+        <div className="grid items-center gap-10 md:gap-12 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-2">
           {/* Left Column — Content */}
           <div>
             <div
@@ -72,7 +72,7 @@ export default function HeroSection() {
 
             <h1
               data-anim="fade-up"
-              className="font-heading font-semibold text-3xl leading-tight sm:text-5xl lg:text-6xl xl:text-7xl"
+              className="font-heading font-semibold text-3xl leading-snug sm:text-4xl lg:text-5xl xl:text-6xl"
             >
               Boutique{' '}
               <em className="not-italic text-brand-purple">Email</em>{' '}
@@ -81,7 +81,7 @@ export default function HeroSection() {
 
             <p
               data-anim="fade-up"
-              className="mt-4 max-w-lg text-base leading-relaxed text-gray-600 sm:mt-6 sm:text-lg sm:leading-relaxed sm:text-xl"
+              className="mt-3 max-w-lg text-sm leading-relaxed text-gray-600 sm:mt-4 sm:text-base"
             >
               We build bespoke brand scaling frameworks that deliver real,
               measurable growth — backed by a{' '}

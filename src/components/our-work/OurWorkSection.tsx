@@ -41,7 +41,7 @@ export default function OurWorkSection() {
       style={{ backgroundImage: 'url(/assets/our_work/Our%20Work%20BG.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className="mx-auto mb-4 max-w-[1384px] px-4 text-center sm:mb-8 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-xl font-semibold leading-tight text-white sm:text-3xl lg:text-4xl">
+        <h2 className="font-heading text-2xl font-semibold leading-tight text-white sm:text-3xl lg:text-4xl">
           Our Work Speaks{' '}
           <em className="not-italic text-brand-amber">For Itself</em>
         </h2>

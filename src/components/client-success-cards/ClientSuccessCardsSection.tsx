@@ -66,14 +66,20 @@ export default function ClientSuccessCardsSection() {
         ease: 'power3.out',
         scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
       })
-      gsap.from('[data-anim="success-card"]', {
-        y: 60,
-        opacity: 0,
-        stagger: 0.25,
-        duration: 0.8,
-        ease: 'power3.out',
-        scrollTrigger: { trigger: '[data-anim="success-card"]', start: 'top 85%' },
+
+      ;(gsap.utils.toArray('[data-anim="success-card"]') as Element[]).forEach((card) => {
+        gsap.from(card, {
+          y: 60,
+          opacity: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+          },
+        })
       })
+
       gsap.from('[data-anim="float-deco"]', {
         y: () => Math.random() * 40 - 20,
         x: () => Math.random() * 40 - 20,
@@ -167,7 +173,7 @@ export default function ClientSuccessCardsSection() {
               <article
                 key={card.id}
                 data-anim="success-card"
-                className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-xl sm:rounded-3xl sm:hover:-translate-y-2"
+                className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition-shadow duration-500 hover:shadow-xl sm:rounded-3xl"
               >
                 {/* Colored header block */}
                 <div className={`relative flex h-36 items-end overflow-hidden sm:h-44 lg:h-52 ${headerBg}`}>

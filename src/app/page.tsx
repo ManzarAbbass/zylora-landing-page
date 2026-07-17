@@ -6,6 +6,7 @@ import ClientSuccessCardsSection from '@/components/client-success-cards/ClientS
 import VideoTestimonialsSection from '@/components/video-testimonials/VideoTestimonialsSection'
 import DashboardSection from '@/components/ai-dashboard/DashboardSection'
 import EducationalVideosSection from '@/components/educational-videos/EducationalVideosSection'
+import FaqSection from '@/components/faq/FaqSection'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <VideoTestimonialsSection />
         <DashboardSection />
         <EducationalVideosSection />
+        <FaqSection />
       </main>
     </>
   )

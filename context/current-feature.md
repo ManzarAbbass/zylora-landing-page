@@ -1,13 +1,23 @@
-# Current Feature
+# Current Feature: FAQ Section (Section 08)
 
 ## Status
-<!-- Not Started | In Progress | Complete -->
+Complete
 
 ## Goals
-<!-- Goals will be defined when a feature is started -->
+- Build full-bleed purple backdrop section with repeating typographic wordmark pattern
+- Add centered serif heading with yellow italic *Questions* accent
+- Create 5 vertically stacked accordion rows in white rounded-pill containers
+- Implement GSAP toggle animations for expand/collapse and plus-to-symbol transition
+- All 5 rows start collapsed; pointer event toggles open/close
+- Use dark obsidian (#111111) question text and white row backgrounds
+- Resolve buyer objections in sequential order: freelancer concern → credibility proof → email provider dependency → client effort → system suitability
 
 ## Notes
-<!-- Notes will be added during feature development -->
+- **Design Tokens**: Section bg: `#6366F1` (brand purple), Heading: `#FFFFFF` white, Accent: `#FACC15` yellow, Row bg: `#FFFFFF` white, Question text: `#111111`
+- **Typography**: Headings in editorial serif with italic support; accordion triggers/body in geometric sans-serif
+- **5 Questions**: "Will I be handed over to freelancers?", "How do I know you can do what you say you can?", "Do I need an email provider?", "What do I need to do?", "Will email marketing work for me?"
+- **Answers require**: factual, verified operational data (no template dummy text)
+- Accordion row shape must match the pill/rounded-rect design signatures used across hero, thumbnails, etc.
 
 ## History
 - **2026-07-14** — Hero Section (Section 01): implemented NavBar (ZYLORA logo, 6 nav links, purple CTA), hero split-grid with GSAP entrance animations, eyebrow badge with purple dot indicator, serif H1 headline, subtext with &quot;guarantee&quot; highlight, image collage with floating badge chips.
